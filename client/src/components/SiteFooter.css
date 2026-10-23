@@ -1,0 +1,9 @@
+footer {
+  margin-top: auto;
+}
+footer .brand {
+  display: inline-block;
+}
+.footer-links a {
+  padding: 5px;
+}

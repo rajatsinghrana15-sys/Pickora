@@ -1,0 +1,135 @@
+.offers-slider {
+  min-height: 245px;
+  padding: 34px clamp(22px, 7vw, 96px);
+  display: grid;
+  grid-template-columns: minmax(100px, 0.4fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  background: #eae7de;
+}
+.offer-art {
+  width: 142px;
+  height: 142px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 50%;
+  color: var(--rust);
+  background: #f8f6f1;
+}
+.offer-art > svg {
+  z-index: 1;
+  stroke-width: 1.25;
+}
+.offer-orbit {
+  position: absolute;
+  inset: 11px;
+  border: 1px solid #cdbdaf;
+  border-radius: 50%;
+}
+.offer-orbit-two {
+  inset: 22px;
+  border-style: dashed;
+}
+.offer-content {
+  animation: offer-enter 0.35s ease both;
+}
+.offer-eyebrow {
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+.offer-content h1 {
+  max-width: 650px;
+  margin: 12px 0 8px;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.08;
+}
+.offer-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.offer-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.offer-controls > button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c9c4b8;
+  border-radius: 50%;
+  background: transparent;
+}
+.offer-dots {
+  display: flex;
+  gap: 6px;
+}
+.offer-dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #bcb7ab;
+}
+.offer-dots button[aria-current="true"] {
+  width: 19px;
+  border-radius: 6px;
+  background: var(--green);
+}
+@keyframes offer-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 700px) {
+  .offers-slider {
+    min-height: 255px;
+    padding: 28px 6%;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 17px;
+  }
+  .offer-art {
+    width: 76px;
+    height: 76px;
+  }
+  .offer-art > svg {
+    width: 30px;
+  }
+  .offer-orbit {
+    inset: 6px;
+  }
+  .offer-orbit-two {
+    inset: 12px;
+  }
+  .offer-content h1 {
+    margin: 9px 0 6px;
+    font-size: clamp(25px, 7vw, 34px);
+  }
+  .offer-content p {
+    font-size: 11px;
+  }
+  .offer-controls {
+    grid-column: 2;
+    justify-content: flex-end;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offer-content {
+    animation: none;
+  }
+}

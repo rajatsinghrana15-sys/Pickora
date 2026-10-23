@@ -1,0 +1,27 @@
+.not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.not-found h1 {
+  margin: 16px 0 9px;
+  font:
+    500 45px/1.14 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -1.2px;
+}
+.not-found p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+@media (max-width: 480px) {
+  .not-found h1 {
+    font-size: 35px;
+  }
+}

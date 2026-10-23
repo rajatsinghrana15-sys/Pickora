@@ -1,0 +1,595 @@
+.admin-page .admin-metrics {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.admin-page .admin-tables {
+  grid-template-columns: 1fr;
+}
+.admin-page .admin-editor h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.admin-product-form label small {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.danger-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-color: #efc9c3;
+  color: #a33b2e;
+  background: #fff8f6;
+}
+.danger-action:hover {
+  border-color: #a33b2e;
+  color: #fff;
+  background: #a33b2e;
+}
+.admin-page .admin-accounts {
+  margin-top: 20px;
+}
+.admin-account {
+  display: block;
+  border-bottom: 1px solid var(--line);
+}
+.admin-account > .admin-table-row {
+  border: 0;
+}
+.account-reviews {
+  margin: 0 0 14px 12px;
+  padding: 12px 16px;
+  border-left: 2px solid #d9d2c4;
+  background: #f8f6f1;
+}
+.account-reviews > b {
+  font-size: 10px;
+}
+.account-reviews > p {
+  margin-bottom: 0;
+  font-size: 10px;
+}
+.admin-review {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.admin-review > span {
+  margin-right: 10px;
+  font-size: 10px;
+}
+.admin-review > strong {
+  font-size: 10px;
+}
+.admin-review p {
+  margin: 7px 0;
+  font-size: 10px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.admin-review small {
+  color: var(--muted);
+  font-size: 9px;
+}
+.dashboard-home-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dashboard-home-link:hover {
+  color: var(--rust);
+}
+@media (max-width: 760px) {
+  .admin-page .admin-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .account-reviews {
+    margin-left: 0;
+  }
+  .admin-account > .admin-table-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* Admin-only section navigation, lists, popups and support */
+.admin-page .admin-welcome {
+  align-items: center;
+}
+.admin-page .admin-nav {
+  position: sticky;
+  top: 8px;
+  z-index: 5;
+  margin: 0 0 25px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow-x: auto;
+  border: 1px solid #e0e7df;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 5px 18px #17251d0b;
+}
+.admin-page .admin-nav a {
+  min-height: 40px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  color: #536259;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.admin-page .admin-nav a:hover,
+.admin-page .admin-nav a.active {
+  background: #eaf3e9;
+  color: #21663d;
+}
+.admin-page .admin-nav .admin-landing-link {
+  margin-left: auto;
+  color: #455c72;
+}
+.admin-page .admin-shortcuts {
+  margin-bottom: 26px;
+  padding: 25px;
+  border: 1px solid #e6ece5;
+  border-radius: 8px;
+  background: #fff;
+}
+.admin-page .admin-shortcuts h2 {
+  margin: 0 0 17px;
+  color: #17251d;
+  font-size: 19px;
+}
+.admin-page .admin-shortcuts > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.admin-page .admin-shortcuts a {
+  min-height: 92px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid #e5ebe4;
+  border-radius: 7px;
+  background: #fbfcfa;
+  text-decoration: none;
+}
+.admin-page .admin-shortcuts a > svg {
+  flex: 0 0 auto;
+  color: #39875a;
+}
+.admin-page .admin-shortcuts a span {
+  display: grid;
+  gap: 4px;
+}
+.admin-page .admin-shortcuts a b {
+  color: #24352a;
+  font-size: 13px;
+}
+.admin-page .admin-shortcuts a small {
+  color: #778179;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.admin-page .admin-list-panel {
+  padding: clamp(18px, 3vw, 28px);
+}
+.admin-page .admin-list-tools {
+  margin: 0 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-page .admin-list-tools > label {
+  width: min(480px, 100%);
+  min-height: 42px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #dfe6df;
+  border-radius: 6px;
+  color: #829087;
+  background: #fff;
+}
+.admin-page .admin-list-tools input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #17251d;
+  background: transparent;
+  font-size: 12px;
+}
+.admin-page .admin-total {
+  display: block;
+  margin: -8px 0 10px;
+  color: #829087;
+  font-size: 11px;
+}
+.admin-page .admin-order-row {
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(170px, auto);
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid #edf0ec;
+}
+.admin-page .admin-order-row > div {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+.admin-page .admin-order-row > div > b {
+  color: #243329;
+  font-size: 13px;
+}
+.admin-affiliate-disclaimer {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid #e8d7b7;
+  border-radius: 8px;
+  color: #61481f;
+  background: #fff9ed;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.admin-affiliate-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.admin-affiliate-product img {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  object-fit: cover;
+}
+.admin-page .admin-order-row small {
+  color: #829087;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.admin-page .admin-order-row > strong {
+  white-space: nowrap;
+}
+.admin-page .admin-order-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+}
+.admin-page .admin-order-status select {
+  max-width: 130px;
+  min-height: 36px;
+  padding: 5px 8px;
+  border: 1px solid #dfe6df;
+  border-radius: 5px;
+  color: #35443a;
+  background: #fff;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+.admin-page .admin-user-row {
+  min-height: 76px;
+  padding: 13px 0;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 1px solid #edf0ec;
+}
+.admin-page .admin-user-avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #21663d;
+  background: #eaf3e9;
+  font-weight: 800;
+}
+.admin-page .admin-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.admin-page .admin-review-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.admin-page .admin-review-card {
+  padding: 16px;
+  border: 1px solid #e6ece5;
+  border-radius: 7px;
+  background: #fff;
+}
+.admin-page .admin-review-title {
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.admin-page .admin-review-title span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #b5812f;
+  font-size: 12px;
+  font-weight: 750;
+}
+.admin-page .admin-review-title small,
+.admin-page .admin-review-card > small {
+  color: #89958c;
+  font-size: 10px;
+}
+.admin-page .admin-review-card > b {
+  color: #28392d;
+  font-size: 13px;
+}
+.admin-page .admin-review-card > p {
+  margin: 8px 0;
+  color: #657369;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.admin-page .admin-empty,
+.admin-page .admin-loading {
+  padding: 18px 0;
+  color: #829087;
+  font-size: 12px;
+}
+.admin-page .admin-pager {
+  margin-top: 12px;
+  padding-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #edf0ec;
+  color: #778179;
+  font-size: 11px;
+}
+.admin-page .admin-pager > div {
+  display: flex;
+  gap: 7px;
+}
+.admin-page .admin-pager button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid #dfe6df;
+  border-radius: 5px;
+  color: #35443a;
+  background: #fff;
+  font-size: 11px;
+}
+.admin-page .admin-pager button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.admin-page .admin-help-title {
+  margin-bottom: 23px;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  color: #39875a;
+}
+.admin-page .admin-help-title h2 {
+  margin: 0;
+  color: #17251d;
+  font-size: 22px;
+}
+.admin-page .admin-help-title p {
+  margin: 5px 0 0;
+  color: #778179;
+  font-size: 12px;
+}
+.admin-page .admin-help-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+.admin-page .admin-help-grid article {
+  padding: 18px;
+  border: 1px solid #e6ece5;
+  border-radius: 7px;
+  background: #fbfcfa;
+}
+.admin-page .admin-help-grid h3 {
+  margin: 0 0 9px;
+  color: #243329;
+  font-size: 14px;
+}
+.admin-page .admin-help-grid p {
+  margin: 7px 0 0;
+  color: #66746a;
+  font-size: 12px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.admin-page .admin-modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  padding: 22px;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  background: #0d1b13a8;
+  backdrop-filter: blur(3px);
+}
+.admin-page .admin-modal {
+  width: min(760px, 100%);
+  max-height: min(90vh, 900px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e2e8e1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 24px 90px #07130b55;
+}
+.admin-page .admin-modal.admin-modal-narrow {
+  width: min(480px, 100%);
+}
+.admin-page .admin-modal-heading {
+  min-height: 64px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #edf0ec;
+}
+.admin-page .admin-modal-heading h2 {
+  margin: 0;
+  color: #17251d;
+  font-size: 18px;
+}
+.admin-page .admin-icon-close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  color: #536259;
+  background: transparent;
+}
+.admin-page .admin-modal-body {
+  min-height: 0;
+  padding: 20px;
+  overflow-y: auto;
+}
+.admin-page .admin-modal-body .admin-product-form {
+  gap: 15px;
+}
+.admin-page .admin-modal-body .form-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.admin-page .admin-modal-actions {
+  margin: 5px -20px -20px;
+  padding: 14px 20px 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  border-top: 1px solid #edf0ec;
+  background: #fff;
+}
+.admin-page .admin-confirm-copy,
+.admin-page .admin-feedback-copy {
+  margin: 0;
+  color: #58675d;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.admin-page .admin-feedback-copy.error {
+  color: #a12f27;
+}
+.admin-page .admin-feedback-copy.success {
+  color: #21683b;
+}
+@media (max-width: 760px) {
+  .admin-page .admin-shortcuts > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .admin-page .admin-order-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+  .admin-page .admin-order-status {
+    grid-column: 1/-1;
+    justify-content: space-between;
+  }
+  .admin-page .admin-review-list,
+  .admin-page .admin-help-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-page .admin-user-row {
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+  }
+  .admin-page .admin-user-actions {
+    grid-column: 2/-1;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 520px) {
+  .admin-page .admin-nav a {
+    padding: 0 10px;
+    font-size: 11px;
+  }
+  .admin-page .admin-nav .admin-landing-link {
+    margin-left: 0;
+  }
+  .admin-page .admin-shortcuts {
+    padding: 17px;
+  }
+  .admin-page .admin-shortcuts > div {
+    grid-template-columns: 1fr;
+  }
+  .admin-page .admin-list-panel > .panel-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .admin-page .admin-list-panel > .panel-heading .button {
+    width: 100%;
+  }
+  .admin-page .admin-list-tools > label {
+    width: 100%;
+  }
+  .admin-page .admin-modal-backdrop {
+    padding: 10px;
+  }
+  .admin-page .admin-modal-body {
+    padding: 15px;
+  }
+  .admin-page .admin-modal-body .form-row {
+    grid-template-columns: 1fr;
+  }
+  .admin-page .admin-modal-actions {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 12px 15px 15px;
+  }
+}
+.admin-affiliate-disclaimer {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid #e8d7b7;
+  border-radius: 8px;
+  color: #61481f;
+  background: #fff9ed;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.admin-affiliate-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.admin-affiliate-product img {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  object-fit: cover;
+}

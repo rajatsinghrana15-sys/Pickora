@@ -1,0 +1,24 @@
+.cart-overlay {
+  justify-content: flex-end;
+  padding: 0;
+}
+.cart-overlay .drawer {
+  height: 100dvh;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cart-line {
+  position: relative;
+  padding-right: 22px;
+}
+.cart-line .remove-line {
+  position: absolute;
+  top: 14px;
+  right: 0;
+}
+@media (max-width: 480px) {
+  .cart-overlay .drawer {
+    padding: 20px 16px;
+  }
+}
