@@ -81,20 +81,16 @@ export default function SiteHeader({ onSearch }) {
           className={menuOpen ? "nav market-nav open" : "nav market-nav"}
           aria-label="Shop categories"
         >
-          {categories.map((label, i) => (
-            <Link
-              key={label}
-              preserveScroll
-              to={
-                i === 0
-                  ? "/products"
-                  : `/products?category=${encodeURIComponent(label)}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
+          {navLinks.map((item) => (
+  <Link
+    key={item.label}
+    preserveScroll
+    to={item.to}
+    onClick={() => setMenuOpen(false)}
+  >
+    {item.label}
+  </Link>
+))}
           <span className="nav-disclosure">
             Curated picks · Buy directly from partner stores
           </span>
