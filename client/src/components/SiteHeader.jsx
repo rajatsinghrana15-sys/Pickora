@@ -5,7 +5,12 @@ import { useAuth } from "../contexts/AuthContext.jsx";
 import { useRouter } from "../router/Router.jsx";
 import "./SiteHeader.css";
 
-const categories = ["Shop all", "Home", "Style", "Tech", "Audio"];
+const navLinks = [
+  { label: "All Products", to: "/products" },
+  { label: "Home", to: "/#home" },
+  { label: "Categories", to: "/#categories" },
+  { label: "Products", to: "/#products" },
+];
 
 export default function SiteHeader({ onSearch }) {
   const { user } = useAuth();
