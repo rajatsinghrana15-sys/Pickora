@@ -349,8 +349,8 @@
   min-width: 0;
 }
 .admin-table-row > img {
-  width: 100px;
-  height: 110px;
+  width: 50px;
+  height: 54px;
   object-fit: cover;
   border-radius: 8px;
 }
