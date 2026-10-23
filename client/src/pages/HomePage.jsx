@@ -5,10 +5,13 @@ import { useProducts } from "../contexts/ProductsContext.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import "./HomePage.css";
 
-const categories = ["Home", "Style", "Tech", "Audio"];
-
 export default function HomePage() {
   const { products, loading } = useProducts();
+
+  const categories = [
+    ...new Set(products.map((product) => product.category).filter(Boolean)),
+  ];
+
   const picks = products;
 
   return (
