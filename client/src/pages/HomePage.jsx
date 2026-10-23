@@ -16,7 +16,7 @@ export default function HomePage() {
 
   return (
     <main className="market-home">
-      <section className="market-hero">
+      <section className="market-hero" id="home">
         <div className="market-hero-copy">
           <span className="market-kicker">PICKORA FINDS · UPDATED WEEKLY</span>
           <h1>
@@ -44,7 +44,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="market-category-panel">
+      <section className="market-category-panel" id="categories">
         <div className="market-section-heading">
           <div>
             <span className="market-kicker">BROWSE PICKORA</span>
@@ -79,7 +79,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="market-product-panel">
+      <section className="market-product-panel" id="products">
         <div className="market-section-heading">
           <div>
             <span className="market-kicker">THE PICKORA CATALOG</span>
