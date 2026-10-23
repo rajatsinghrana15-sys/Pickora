@@ -11,19 +11,7 @@ import { User, Product, Order, Review, AffiliateClick } from "./models.js";
 
 const app = express();
 app.use(helmet());
-const allowedOrigins = [
-  "https://pickora-indol.vercel.app",
-  "http://localhost:5173",
-];
-
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173" }));
 app.use(express.json({ limit: "2mb" }));
 app.use(
   "/api/auth",
